@@ -1,0 +1,80 @@
+<style>
+<!--
+#popup {display:none; position: fixed;top: 0;bottom: 0;z-index: 999999;background: rgba(0,0,0,.25);width: 100%;  text-align:center;  padding:.5em;}
+  #popup > div {  background: white;width: 100%;max-width: 450px;top: 50%;position: absolute;left: 50%;transform: translate(-50%,-50%);-webkit-transform: translate(-50%,-50%);-o-transform: translate(-50%,-50%);-moz-transform: translate(-50%,-50%);  padding: 2em .5em;border: 2px solid #000000;}
+  #popup-close {position: absolute;top: 2px;right: 5px;width: 20px;height: 20px;  font-size:1.5em; display:block; cursor:pointer;}
+-->
+</style>
+<div id="popup"> 
+	<div class="home-programs-newsletter">      <span id="popup-close"><i class="fa fa-times" aria-hidden="true"></i></span>
+		<h2>Sign-up For Our Newsletter</h2>          
+		<h4>Receive XX% Off<br />
+			Your First Order!</h4>          
+		<div class="home-programs-form">        
+    
+			<!--
+			Begin MailChimp Signup Form
+			-->
+			
+			<link type="text/css" rel="stylesheet" href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" />
+			<style type="text/css">
+			<!--
+			#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+			-->
+			</style>
+			<div id="mc_embed_signup">    
+				<div id="mc_embed_signup_scroll">                          
+					<label for="mce-EMAIL">Email Sign Up</label>                          
+                          
+					<input placeholder="name@example.com" id="mce-EMAIL-home" class="email" name="EMAIL" value="" style="background: #e7e7e7; padding: 1em !important;line-height: 1.6em;font-size: 16px !important;border: 1px solid #e7e7e7; height:61px;" type="email" />    
+					<!--
+					real people should not fill this in and expect good things - do not remove this or risk form bot signups
+					-->
+					    
+					<div aria-hidden="true" style="position: absolute; left: -5000px;">
+						<input value="" tabindex="-1" name="b_a46b12cbe0_dfb96d77d3" type="text" /></div>    
+					<div class="clear">
+						<input onclick="this.form.action='//example.com/mailchimp';this.form.submit();" class="button" id="mc-embedded-subscribe" name="subscribe" value="SIGN UP" type="submit" /></div>    </div></div>
+			<!--
+			# END MAILCHIMP #
+			-->
+			                  
+                  
+          </div> </div>   </div>
+<!--
+<script>
+$(document).ready(function() {
+	"use strict";
+
+		setTimeout(function(){
+	    	$(document).ready(function() {
+				$('#popup').fadeIn("fast");
+			});
+		}, 3000);
+});
+$("#popup-close").click(function() {
+	"use strict";
+	$("#popup").fadeOut("fast");
+});
+</script>
+-->
+
+<script>
+$(document).ready(function() {
+    if(localStorage.getItem('popState') != 'shown'){
+        $("#popup").delay(3000).fadeIn();
+        localStorage.setItem('popState','shown')
+    }
+
+    $('#popup-close').click(function(e) // You are clicking the close button
+    {
+    $('#popup').fadeOut(); // Now the pop up is hidden.
+    });
+    $('#popup-close').click(function(e) 
+    {
+    $('#popup').fadeOut(); 
+    });
+});
+</script>

@@ -1,10 +1,3 @@
-<style>
-<!--
-#popup {display:none; position: fixed;top: 0;bottom: 0;z-index: 999999;background: rgba(0,0,0,.25);width: 100%;  text-align:center;  padding:.5em;}
-  #popup > div {  background: white;width: 100%;max-width: 450px;top: 50%;position: absolute;left: 50%;transform: translate(-50%,-50%);-webkit-transform: translate(-50%,-50%);-o-transform: translate(-50%,-50%);-moz-transform: translate(-50%,-50%);  padding: 2em .5em;border: 2px solid #000000;}
-  #popup-close {position: absolute;top: 2px;right: 5px;width: 20px;height: 20px;  font-size:1.5em; display:block; cursor:pointer;}
--->
-</style>
 <div id="popup"> 
 	<div class="home-programs-newsletter">      <span id="popup-close"><i class="fa fa-times" aria-hidden="true"></i></span>
 		<h2>Sign-up For Our Newsletter</h2>          
@@ -34,7 +27,7 @@
 					-->
 					    
 					<div aria-hidden="true" style="position: absolute; left: -5000px;">
-						<input value="" tabindex="-1" name="b_a46b12cbe0_dfb96d77d3" type="text" /></div>    
+						<input value="" tabindex="-1" name="mailchimp_NAME" type="text" /></div>    
 					<div class="clear">
 						<input onclick="this.form.action='//example.com/mailchimp';this.form.submit();" class="button" id="mc-embedded-subscribe" name="subscribe" value="SIGN UP" type="submit" /></div>    </div></div>
 			<!--
@@ -43,38 +36,18 @@
 			                  
                   
           </div> </div>   </div>
-<!--
-<script>
-$(document).ready(function() {
-	"use strict";
 
-		setTimeout(function(){
-	    	$(document).ready(function() {
-				$('#popup').fadeIn("fast");
-			});
-		}, 3000);
-});
-$("#popup-close").click(function() {
-	"use strict";
-	$("#popup").fadeOut("fast");
-});
-</script>
--->
 
 <script>
 $(document).ready(function() {
     if(localStorage.getItem('popState') != 'shown'){
         $("#popup").delay(3000).fadeIn();
-        localStorage.setItem('popState','shown')
+        localStorage.setItem('popState','shown') // this will make sur ethe popup "never" comes back
     }
 
     $('#popup-close').click(function(e) // You are clicking the close button
     {
     $('#popup').fadeOut(); // Now the pop up is hidden.
-    });
-    $('#popup-close').click(function(e) 
-    {
-    $('#popup').fadeOut(); 
     });
 });
 </script>

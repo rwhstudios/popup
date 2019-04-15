@@ -34,7 +34,7 @@
 					-->
 					    
 					<div aria-hidden="true" style="position: absolute; left: -5000px;">
-						<input value="" tabindex="-1" name="b_a46b12cbe0_dfb96d77d3" type="text" /></div>    
+						<input value="" tabindex="-1" name="mailchimp_NAME" type="text" /></div>    
 					<div class="clear">
 						<input onclick="this.form.action='//example.com/mailchimp';this.form.submit();" class="button" id="mc-embedded-subscribe" name="subscribe" value="SIGN UP" type="submit" /></div>    </div></div>
 			<!--
@@ -43,38 +43,18 @@
 			                  
                   
           </div> </div>   </div>
-<!--
-<script>
-$(document).ready(function() {
-	"use strict";
 
-		setTimeout(function(){
-	    	$(document).ready(function() {
-				$('#popup').fadeIn("fast");
-			});
-		}, 3000);
-});
-$("#popup-close").click(function() {
-	"use strict";
-	$("#popup").fadeOut("fast");
-});
-</script>
--->
 
 <script>
 $(document).ready(function() {
     if(localStorage.getItem('popState') != 'shown'){
         $("#popup").delay(3000).fadeIn();
-        localStorage.setItem('popState','shown')
+        localStorage.setItem('popState','shown') // this will make sur ethe popup "never" comes back
     }
 
     $('#popup-close').click(function(e) // You are clicking the close button
     {
     $('#popup').fadeOut(); // Now the pop up is hidden.
-    });
-    $('#popup-close').click(function(e) 
-    {
-    $('#popup').fadeOut(); 
     });
 });
 </script>

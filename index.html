@@ -1,14 +1,21 @@
-<div id="popup"> 
-	<div class="home-programs-newsletter">      <span id="popup-close"><i class="fa fa-times" aria-hidden="true"></i></span>
-		<h2>Sign-up For Our Newsletter</h2>          
+<!doctype html>
+<html>
+    <head>
+        <link href="css/css.css" type="text/css">
+        <link href="js/javascript.js" type="text/javascript">
+    </head>
+<body>
+    
+<div id="popup">
+	<div class="home-programs-newsletter">
+        <span id="popup-close"><i class="fa fa-times" aria-hidden="true"></i></span>
+		<h2>EXAMPLE Newsletter via MailChimp</h2> 
 		<h4>Receive XX% Off<br />
 			Your First Order!</h4>          
 		<div class="home-programs-form">        
-    
 			<!--
 			Begin MailChimp Signup Form
 			-->
-			
 			<link type="text/css" rel="stylesheet" href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" />
 			<style type="text/css">
 			<!--
@@ -20,34 +27,22 @@
 			<div id="mc_embed_signup">    
 				<div id="mc_embed_signup_scroll">                          
 					<label for="mce-EMAIL">Email Sign Up</label>                          
-                          
 					<input placeholder="name@example.com" id="mce-EMAIL-home" class="email" name="EMAIL" value="" style="background: #e7e7e7; padding: 1em !important;line-height: 1.6em;font-size: 16px !important;border: 1px solid #e7e7e7; height:61px;" type="email" />    
 					<!--
 					real people should not fill this in and expect good things - do not remove this or risk form bot signups
 					-->
-					    
 					<div aria-hidden="true" style="position: absolute; left: -5000px;">
 						<input value="" tabindex="-1" name="mailchimp_NAME" type="text" /></div>    
 					<div class="clear">
-						<input onclick="this.form.action='//example.com/mailchimp';this.form.submit();" class="button" id="mc-embedded-subscribe" name="subscribe" value="SIGN UP" type="submit" /></div>    </div></div>
+						<input onclick="this.form.action='//example.com/mailchimp';this.form.submit();" class="button" id="mc-embedded-subscribe" name="subscribe" value="SIGN UP" type="submit" />
+                    </div>
+                </div>
+            </div>
 			<!--
 			# END MAILCHIMP #
 			-->
-			                  
-                  
-          </div> </div>   </div>
-
-
-<script>
-$(document).ready(function() {
-    if(localStorage.getItem('popState') != 'shown'){
-        $("#popup").delay(3000).fadeIn();
-        localStorage.setItem('popState','shown') // this will make sur ethe popup "never" comes back
-    }
-
-    $('#popup-close').click(function(e) // You are clicking the close button
-    {
-    $('#popup').fadeOut(); // Now the pop up is hidden.
-    });
-});
-</script>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
